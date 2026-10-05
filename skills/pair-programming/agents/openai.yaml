@@ -1,0 +1,10 @@
+interface:
+  display_name: "Pair Programming"
+  short_description: "Human-led, evidence-first coding"
+  icon_small: "./assets/pair-programming.svg"
+  icon_large: "./assets/pair-programming.svg"
+  brand_color: "#2563EB"
+  default_prompt: "Use $pair-programming to help me investigate and implement this change one approved slice at a time."
+
+policy:
+  allow_implicit_invocation: true

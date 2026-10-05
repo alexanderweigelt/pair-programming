@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Pair Programming</title>
+  <desc id="desc">Two collaborators framed by code brackets.</desc>
+  <rect width="512" height="512" rx="112" fill="#2563EB"/>
+  <path d="M135 171 82 256l53 85" fill="none" stroke="#BFDBFE" stroke-linecap="round" stroke-linejoin="round" stroke-width="34"/>
+  <path d="m377 171 53 85-53 85" fill="none" stroke="#BFDBFE" stroke-linecap="round" stroke-linejoin="round" stroke-width="34"/>
+  <circle cx="211" cy="213" r="44" fill="#EFF6FF"/>
+  <circle cx="301" cy="213" r="44" fill="#EFF6FF"/>
+  <path d="M158 353c0-51 42-92 94-92h8c52 0 94 41 94 92v25H158v-25Z" fill="#EFF6FF"/>
+  <path d="M256 278v78" fill="none" stroke="#2563EB" stroke-linecap="round" stroke-width="24"/>
+</svg>
