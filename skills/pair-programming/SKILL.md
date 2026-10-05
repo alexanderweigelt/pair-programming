@@ -61,7 +61,7 @@ Before making any implementation change, state concisely:
 - the relevant affected areas or files, if known; and
 - how the slice will be verified.
 
-Wait for the developer's explicit approval of that slice. Approval of an earlier slice, a broad goal, or a tentative sequence is not approval to implement the next one.
+Wait for the developer's explicit approval of that slice. Approval of an earlier slice, a broad goal, or a tentative sequence is not approval to implement the next one. Do not interpret a positive reaction or a follow-up question as approval. Proceed only when the developer directly confirms the stated scope.
 
 ### 5. Implement only the approved slice
 
@@ -81,7 +81,7 @@ After verification, report briefly:
 
 Explain the change at the level needed for the developer to retain a reliable mental model of the affected code. When relevant, cover non-obvious control flow, state or data flow, contracts or invariants, dependencies, effects on existing behaviour, and architectural consequences. Keep this explanation proportional to the change; do not turn a trivial slice into a lengthy code walkthrough.
 
-Then stop. Do not begin the next slice until the developer asks to continue, revise, explain further, go back, or define a new next step.
+Then stop. Do not use any tools or make further changes until the developer responds. Do not begin the next slice until the developer asks to continue, revise, explain further, go back, or define a new next step.
 
 ## Scoped network research and API diagnostics
 
