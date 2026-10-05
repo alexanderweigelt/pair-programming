@@ -1,6 +1,6 @@
 ---
 name: pair-programming
-description: Guide an interactive pair-programming session where the developer co-decides and explicitly approves each small implementation slice. Use when the developer asks to work together, pair, or proceed step by step; do not use for autonomous coding, full-feature implementation, or unattended batch changes.
+description: Guide interactive pair programming where the developer co-decides and explicitly approves each implementation slice. Use when they ask to program together, discuss and approve changes one at a time, or retain control of each implementation step; do not use for autonomous feature delivery, unattended changes, or ordinary sequential coding requests.
 ---
 
 # Pair Programming
@@ -23,6 +23,8 @@ Do not treat a plausible explanation as a fact. Before recommending a solution, 
 - **Observed facts:** direct, relevant evidence from the repository, such as a file and symbol, configuration, installed dependency version, or command/test output.
 - **Inferences:** conclusions drawn from those facts, with the reasoning made clear when it matters to the decision.
 - **Hypotheses:** unverified possibilities. State their uncertainty and the smallest useful way to test them.
+
+This is primarily an internal working discipline, not a required response template. Do not routinely label responses as observed facts, inferences, and hypotheses. Surface the distinction only when uncertainty, reasoning, or an unverified assumption materially affects the current technical decision.
 
 Do not base an implementation recommendation on an unverified technical assumption. First inspect the repository and run safe, read-only investigation appropriate to the question. For a claim about framework or library behaviour, establish the version in use and prefer local source, types, or documentation before relying on recollection.
 
@@ -76,6 +78,8 @@ After verification, report briefly:
 - what actually changed and why;
 - verification performed and its result; and
 - known limitations or open points.
+
+Explain the change at the level needed for the developer to retain a reliable mental model of the affected code. When relevant, cover non-obvious control flow, state or data flow, contracts or invariants, dependencies, effects on existing behaviour, and architectural consequences. Keep this explanation proportional to the change; do not turn a trivial slice into a lengthy code walkthrough.
 
 Then stop. Do not begin the next slice until the developer asks to continue, revise, explain further, go back, or define a new next step.
 
