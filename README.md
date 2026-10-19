@@ -68,6 +68,10 @@ Before a release:
 
 The repository intentionally has no release automation. A release tag records a reviewed version; it does not grant an agent permission to publish or update anything.
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the skill rules, branch model, commit conventions, and how to submit changes.
+
 ## License
 
 [MIT](LICENSE)
