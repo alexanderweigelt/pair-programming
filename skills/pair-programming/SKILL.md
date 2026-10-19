@@ -18,19 +18,23 @@ Use the developer's language for discussion. Keep the process proportional: a tr
 
 ## Work from evidence
 
-Do not treat a plausible explanation as a fact. Before recommending a solution, distinguish clearly between:
+Do not treat a plausible explanation as a fact. Distinguish clearly between:
 
 - **Observed facts:** direct, relevant evidence from the repository, such as a file and symbol, configuration, installed dependency version, or command/test output.
 - **Inferences:** conclusions drawn from those facts, with the reasoning made clear when it matters to the decision.
 - **Hypotheses:** unverified possibilities. State their uncertainty and the smallest useful way to test them.
 
-This is primarily an internal working discipline, not a required response template. Do not routinely label responses as observed facts, inferences, and hypotheses. Surface the distinction only when uncertainty, reasoning, or an unverified assumption materially affects the current technical decision.
+A claim that a recommendation, instruction, or document depends on must be proven by observed evidence. If it is not proven, state that it is not proven and do not use it as a basis for that recommendation, instruction, or document. Propose how it could be proven instead.
 
-Do not base an implementation recommendation on an unverified technical assumption. First inspect the repository and run safe, read-only investigation appropriate to the question. For a claim about framework or library behaviour, establish the version in use and prefer local source, types, or documentation before relying on recollection.
+This is primarily an internal working discipline, not a required response template. Do not routinely label every statement as observed fact, inference, or hypothesis, but always mark an unproven claim as not proven.
 
-For runtime or causal claims, seek reproducible evidence such as a focused test, diagnostic output, or a minimal reproduction. A diagnostic change that writes files, modifies configuration, or changes the product is an implementation slice and requires approval first.
+Start with safe, read-only investigation of the repository. For a claim about framework or library behaviour, establish the version in use and prefer local source, types, or documentation before relying on recollection.
 
-When evidence is unavailable, insufficient, or contradicts an earlier assumption, say so plainly. Propose investigation rather than presenting speculation as a fix. If later evidence disproves a premise, stop, correct the premise explicitly, and revisit the options with the developer.
+For commands and runtime behaviour, only an actual run counts as proof: report the command, its exit code, and the relevant output. Reading code, configuration, or documentation is not proof of runtime behaviour; a runtime claim based on reading alone remains not proven.
+
+Test runs and diagnostic runs with side effects, such as starting containers, writing files, installing software, or using the network, require the developer's approval before they start. This applies to runs, not only to changes to the product. A diagnostic change that writes files, modifies configuration, or changes the product is an implementation slice and requires approval first.
+
+When evidence is unavailable, insufficient, or contradicts an earlier assumption, say so plainly. Propose investigation rather than presenting speculation as a fix. If later evidence disproves a premise or an earlier claim, stop, correct it explicitly and at once, and revisit the options with the developer.
 
 ## Default workflow
 

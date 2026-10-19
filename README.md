@@ -6,7 +6,8 @@ An evidence-first agent skill for deliberate, human-led pair programming.
 
 ## What it provides
 
-- Evidence before recommendations: observations, inferences, and hypotheses stay distinct.
+- Evidence before recommendations: claims that a recommendation depends on must be proven, unproven claims are marked as not proven, and runtime behaviour counts as proven only after an actual run.
+- Approval before test or diagnostic runs with side effects, not only before product changes.
 - Small, reviewable implementation slices rather than autonomous feature delivery.
 - Mandatory approval before every implementation slice.
 - A checkpoint before implementation and another after verification.
