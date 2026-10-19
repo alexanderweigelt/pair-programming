@@ -28,6 +28,6 @@ There is no npm package, no build step, and no release automation. A release is 
 
 1. Verify local discovery: `npx skills add . --list`
 2. Install into a disposable test project and verify one basic invocation in the target agent
-3. Run Mondoo SkillCheck and review the unmodified result (requires explicit approval)
+3. Confirm that the Mondoo SkillCheck workflow passed on the release commit and review its unmodified output
 4. Review the diff, then explicitly approve commit and push
 5. Tag the release and create the GitHub release manually

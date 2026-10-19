@@ -62,7 +62,7 @@ Before a release:
 
 1. Confirm that the skill is discovered locally with `npx skills add . --list`.
 2. With explicit approval, install it into a disposable local or test project and check one basic invocation in the intended agent.
-3. With separate strict approval, run Mondoo SkillCheck and review the unmodified result.
+3. Confirm that the Mondoo SkillCheck workflow passed on the release commit and review its unmodified output.
 4. Review the diff, then explicitly approve the commit and push.
 5. Tag the reviewed first public release as `v0.1.0` and create the corresponding GitHub release.
 
