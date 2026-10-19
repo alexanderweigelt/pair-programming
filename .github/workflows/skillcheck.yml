@@ -7,6 +7,12 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+
+env:
+  DISABLE_TELEMETRY: "1"
+
 jobs:
   skillcheck:
     name: Scan for malicious skill content
@@ -14,6 +20,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - uses: actions/setup-node@v4
         with:
