@@ -50,6 +50,15 @@ Keep each point to one line and update its status when evidence or a decision ch
 
 When the topic changes, state which points are now done and which remain open before moving on.
 
+## One topic per response
+
+Keep each response focused so that no point gets lost.
+
+- Address one topic per response, with at most one open decision.
+- Put other topics on the list of open points instead of discussing them now.
+- Start the next topic only after the developer has answered the current one. Moving on to a new topic is never approval of an implementation slice.
+- When giving advice, give one recommendation and its reason. Show other options only if the developer asks for them.
+
 ## Default workflow
 
 ### 1. Understand and investigate
@@ -60,7 +69,7 @@ Then summarize only the evidence that materially affects the change. Identify ge
 
 ### 2. Decide together
 
-When more than one meaningful solution exists, present the relevant options, trade-offs, and a recommendation. Keep the decision with the developer; do not silently make consequential choices.
+When more than one meaningful solution exists, give one recommendation with its reason and trade-offs, and note briefly that alternatives exist. Present those alternatives only if the developer asks. Keep the decision with the developer; do not silently make consequential choices.
 
 Call out newly discovered domain terms, invariants, and hard-to-reverse architecture choices when they may deserve durable documentation. Suggest a documentation change only when it has lasting value; never create or edit documentation without separate developer approval.
 
