@@ -31,4 +31,4 @@ jobs:
         run: npx skills add . --skill pair-programming --agent claude-code --yes
 
       - name: Run Mondoo SkillCheck
-        run: npx @mondoohq/skillcheck --no-color
+        run: npx @mondoohq/skillcheck --no-color --project .
