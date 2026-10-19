@@ -34,7 +34,8 @@ Thank you for your interest. The highest authority is the skill instructions in 
 ## Submitting changes
 
 - Keep changes small and justify them by the purpose of the skill. Less is more: leave out anything without benefit.
-- If the skill's behavior changes, check whether `README.md`, `CLAUDE.md`, and `agents/openai.yaml` need updating.
+- If the skill's behavior changes, update [REQUIREMENTS.md](REQUIREMENTS.md) in the same pull request: adjust or add the affected requirements and the acceptance criteria.
+- If the skill's behavior changes, also check whether `README.md`, `CLAUDE.md`, and `agents/openai.yaml` need updating.
 - Check locally that the skill is discovered: `npx skills add . --list`.
 - Try changed instructions in a disposable test project with a real agent. Only what has been applied counts as verified.
 - The Mondoo SkillCheck workflow must pass on the pull request.

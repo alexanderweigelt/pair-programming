@@ -13,6 +13,7 @@ The skill is intentionally instruction-only: no scripts, executables, MCP server
 - `skills/pair-programming/SKILL.md` — the skill instructions consumed by coding agents (frontmatter defines name, description, and invocation behavior)
 - `skills/pair-programming/agents/openai.yaml` — agent-specific interface metadata (display name, icon, default prompt, invocation policy)
 - `skills/pair-programming/assets/` — icon assets referenced by the agent interface config
+- `REQUIREMENTS.md` — maintainer reference for the intended skill behavior; must be updated in the same pull request as any behavior change to `SKILL.md`
 
 ## Contribution rules
 
