@@ -66,7 +66,7 @@ Before a release:
 2. With explicit approval, install it into a disposable local or test project and check one basic invocation in the intended agent.
 3. Confirm that the Mondoo SkillCheck workflow passed on the release commit and review its unmodified output.
 4. Review the diff, then explicitly approve the commit and push.
-5. Tag the reviewed first public release as `v0.1.0` and create the corresponding GitHub release.
+5. Tag the reviewed release in the `vX.Y.Z` format, for example `v0.2.0`, and create the corresponding GitHub release.
 
 The repository intentionally has no release automation. A release tag records a reviewed version; it does not grant an agent permission to publish or update anything.
 
