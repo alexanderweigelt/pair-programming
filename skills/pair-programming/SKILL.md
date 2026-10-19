@@ -36,6 +36,20 @@ Test runs and diagnostic runs with side effects, such as starting containers, wr
 
 When evidence is unavailable, insufficient, or contradicts an earlier assumption, say so plainly. Propose investigation rather than presenting speculation as a fix. If later evidence disproves a premise or an earlier claim, stop, correct it explicitly and at once, and revisit the options with the developer.
 
+## Track open points
+
+Keep a short list of open points: questions, hypotheses, and decisions that still matter to the change. Do not leave a point only in the body of a long answer.
+
+Give each point one status:
+
+- **open:** not yet settled;
+- **proven:** confirmed by evidence or decided by the developer;
+- **disproven:** refuted by evidence or rejected by the developer.
+
+Keep each point to one line and update its status when evidence or a decision changes it. Show the list when it changes or when the developer asks, not in every response.
+
+When the topic changes, state which points are now done and which remain open before moving on.
+
 ## Default workflow
 
 ### 1. Understand and investigate
