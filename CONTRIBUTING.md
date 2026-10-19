@@ -18,13 +18,11 @@ Danke für Ihr Interesse. Die oberste Grundlage sind die Skill-Anweisungen in [s
 - Dieser Leitfaden ist deutsch.
 - Formulierungen werden wörtlich gelesen: „sollte“ ist optional, „muss“ ist Pflicht. Nicht verschärfen.
 
-## Branch-Modell (Gitflow)
+## Branch-Modell
 
-- `main` enthält nur veröffentlichte, stabile Stände. Es wird nicht direkt darauf gearbeitet.
-- `develop` sammelt fertige Änderungen für die nächste Version.
-- `feature/<short-name>` für jede Änderung, abgezweigt von `develop` und dorthin zurückgeführt.
-- `release/<version>` zur Vorbereitung einer Version, danach nach `main` und `develop`.
-- `hotfix/<short-name>` für dringende Korrekturen, abgezweigt von `main`, danach nach `main` und `develop`.
+- `main` enthält nur geprüfte, stabile Stände. Es wird nicht direkt darauf gearbeitet.
+- `feature/<short-name>` für jede Änderung, abgezweigt von `main` und per Pull Request dorthin zurückgeführt.
+- Ein Release ist ein Tag auf `main`, siehe [Releases](#releases).
 - Branch-Namen sind immer englisch, Kleinbuchstaben, mit Bindestrichen, zum Beispiel `feature/handoff-format`.
 
 ## Commits (Conventional Commits)

@@ -16,7 +16,7 @@ The skill is intentionally instruction-only: no scripts, executables, MCP server
 
 ## Contribution rules
 
-[CONTRIBUTING.md](CONTRIBUTING.md) is binding for all work in this repository: Gitflow branches (`feature/<short-name>` from `develop`), Conventional Commits in English, small changes, and no commit, push, or delete without an explicit request.
+[CONTRIBUTING.md](CONTRIBUTING.md) is binding for all work in this repository: `feature/<short-name>` branches from `main` merged via pull request, Conventional Commits in English, small changes, and no commit, push, or delete without an explicit request.
 
 ## How the skill is distributed
 
