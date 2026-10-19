@@ -1,54 +1,53 @@
-# Mitwirken an Pair Programming
+# Contributing to Pair Programming
 
-Danke für Ihr Interesse. Die oberste Grundlage sind die Skill-Anweisungen in [skills/pair-programming/SKILL.md](skills/pair-programming/SKILL.md) und das Sicherheitsmodell im [README](README.md#security-model): Was dort steht, gilt. Prüfen Sie jede Änderung daran.
+Thank you for your interest. The highest authority is the skill instructions in [skills/pair-programming/SKILL.md](skills/pair-programming/SKILL.md) and the security model in the [README](README.md#security-model): what they say applies. Check every change against them.
 
-## Regeln für den Skill
+## Skill rules
 
-- Der Skill bleibt reine Anweisung: keine Skripte, ausführbaren Dateien, MCP-Server oder vorausgesetzten externen Dienste.
-- Das Frontmatter von `SKILL.md` legt Name, Beschreibung und Aufrufverhalten fest. Die Beschreibung sagt, wann der Skill passt und wann nicht.
-- Der Kern ist anbieterneutral. Agentenspezifisches gehört in eigene Dateien unter `agents/`, zum Beispiel `agents/openai.yaml`, und muss zu `SKILL.md` passen.
-- Assets unter `assets/` werden nur aufgenommen, wenn eine Agentenkonfiguration sie referenziert.
-- Freigabe- und Stopp-Grenzen (Netzwerk, Installationen, Commits, Pushes, Sicherheitsprüfungen) werden nicht aufgeweicht. Jede Lockerung braucht eine ausdrückliche Begründung im Pull Request.
-- Keine Entstehungsgeschichte, Schulungsbezüge oder Änderungshistorien in `SKILL.md`.
-- Nichts erfinden: keine Funktionen, Fakten, Befehle oder Prüfergebnisse. Was nicht geprüft werden konnte, wird als ungeprüft gekennzeichnet.
+- The skill stays instruction-only: no scripts, executables, MCP servers, or required external services.
+- The `SKILL.md` frontmatter defines name, description, and invocation behavior. The description states when the skill fits and when it does not.
+- The core is provider-neutral. Agent-specific details belong in separate files under `agents/`, for example `agents/openai.yaml`, and must match `SKILL.md`.
+- Assets under `assets/` are added only when an agent configuration references them.
+- Approval and stop boundaries (network, installs, commits, pushes, security checks) are not weakened. Any relaxation needs an explicit justification in the pull request.
+- No origin story, training references, or change history in `SKILL.md`.
+- Invent nothing: no features, facts, commands, or check results. Anything that could not be verified is marked as unverified.
 
-## Sprache
+## Language
 
-- Anweisungen für Agenten (`SKILL.md`, `agents/openai.yaml`, `CLAUDE.md`), das `README`, Dateinamen und Code sind englisch.
-- Dieser Leitfaden ist deutsch.
-- Formulierungen werden wörtlich gelesen: „sollte“ ist optional, „muss“ ist Pflicht. Nicht verschärfen.
+- Everything in this repository is in English: agent instructions (`SKILL.md`, `agents/openai.yaml`, `CLAUDE.md`), documentation, file names, and code.
+- Wording is read literally: "should" is optional, "must" is mandatory. Do not tighten it.
 
-## Branch-Modell
+## Branch model
 
-- `main` enthält nur geprüfte, stabile Stände. Es wird nicht direkt darauf gearbeitet.
-- `feature/<short-name>` für jede Änderung, abgezweigt von `main` und per Pull Request dorthin zurückgeführt.
-- Ein Release ist ein Tag auf `main`, siehe [Releases](#releases).
-- Branch-Namen sind immer englisch, Kleinbuchstaben, mit Bindestrichen, zum Beispiel `feature/handoff-format`.
+- `main` contains only reviewed, stable states. Nobody works on it directly.
+- `feature/<short-name>` for every change, branched from `main` and merged back via pull request.
+- A release is a tag on `main`, see [Releases](#releases).
+- Branch names are always English, lowercase, with hyphens, for example `feature/handoff-format`.
 
 ## Commits (Conventional Commits)
 
-- Commit-Nachrichten folgen [Conventional Commits](https://www.conventionalcommits.org/) und sind immer englisch: `<type>: <description>`, zum Beispiel `fix: tighten approval boundaries`.
-- Erlaubte Typen: `feat`, `fix`, `docs`, `refactor`, `ci`, `chore`.
-- Die Beschreibung steht im Imperativ, ohne Punkt am Ende. Eine Begründung kann in den Nachrichtentext.
-- Eine logische Änderung pro Commit. Ein Breaking Change wird mit `!` hinter dem Typ und `BREAKING CHANGE:` im Nachrichtentext gekennzeichnet.
+- Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/) and are always in English: `<type>: <description>`, for example `fix: tighten approval boundaries`.
+- Allowed types: `feat`, `fix`, `docs`, `refactor`, `ci`, `chore`.
+- The description is in the imperative mood, without a trailing period. A rationale can go in the message body.
+- One logical change per commit. A breaking change is marked with `!` after the type and `BREAKING CHANGE:` in the message body.
 
-## Änderungen einreichen
+## Submitting changes
 
-- Halten Sie Änderungen klein und begründen Sie sie mit dem Zweck des Skills. Weniger ist besser: Lassen Sie weg, was keinen Nutzen hat.
-- Ändert sich das Verhalten des Skills, prüfen Sie, ob `README.md`, `CLAUDE.md` und `agents/openai.yaml` angepasst werden müssen.
-- Prüfen Sie lokal, dass der Skill gefunden wird: `npx skills add . --list`.
-- Probieren Sie geänderte Anweisungen in einem Wegwerf-Testprojekt mit einem echten Agenten aus. Nur Angewendetes gilt als geprüft.
-- Der Workflow „Mondoo SkillCheck“ muss auf dem Pull Request grün sein.
+- Keep changes small and justify them by the purpose of the skill. Less is more: leave out anything without benefit.
+- If the skill's behavior changes, check whether `README.md`, `CLAUDE.md`, and `agents/openai.yaml` need updating.
+- Check locally that the skill is discovered: `npx skills add . --list`.
+- Try changed instructions in a disposable test project with a real agent. Only what has been applied counts as verified.
+- The Mondoo SkillCheck workflow must pass on the pull request.
 
 ## Releases
 
-- Ein Release ist ein geprüfter Git-Tag im Format `v0.1.0` mit zugehörigem GitHub-Release. Es gibt keine Release-Automatisierung.
-- Vor jedem Release wird die Checkliste unter [Maintainer checks and releases](README.md#maintainer-checks-and-releases) abgearbeitet.
+- A release is a reviewed Git tag in the `v0.1.0` format with a corresponding GitHub release. There is no release automation.
+- Before every release, work through the checklist under [Maintainer checks and releases](README.md#maintainer-checks-and-releases).
 
-## Mit Agenten arbeiten
+## Working with agents
 
-Agenten, die an diesem Repository arbeiten, folgen [CLAUDE.md](CLAUDE.md) und den Branch- und Commit-Regeln oben. Sie committen, pushen oder löschen nicht ohne ausdrücklichen Auftrag.
+Agents working on this repository follow [CLAUDE.md](CLAUDE.md) and the branch and commit rules above. They do not commit, push, or delete without an explicit request.
 
-## Lizenz
+## License
 
-Mit Ihrem Beitrag stimmen Sie zu, dass er unter der [MIT-Lizenz](LICENSE) steht.
+By contributing, you agree that your contribution is licensed under the [MIT License](LICENSE).
