@@ -14,6 +14,10 @@ The skill is intentionally instruction-only: no scripts, executables, MCP server
 - `skills/pair-programming/agents/openai.yaml` — agent-specific interface metadata (display name, icon, default prompt, invocation policy)
 - `skills/pair-programming/assets/` — icon assets referenced by the agent interface config
 
+## Contribution rules
+
+[CONTRIBUTING.md](CONTRIBUTING.md) is binding for all work in this repository: `feature/<short-name>` branches from `main` merged via pull request, Conventional Commits in English, small changes, and no commit, push, or delete without an explicit request.
+
 ## How the skill is distributed
 
 The repository is a GitHub source for the Skills CLI. Users install it via:
