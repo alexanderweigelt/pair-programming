@@ -10,6 +10,9 @@ on:
 permissions:
   contents: read
 
+env:
+  DISABLE_TELEMETRY: "1"
+
 jobs:
   skillcheck:
     name: Scan for malicious skill content
